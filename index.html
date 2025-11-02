@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑 নাসরিন: আমার হৃদয়ের রানী (My Queen Nasrin)</title>
+    <style>
+        /* ফন্ট ইম্পোর্ট: রয়্যাল ভাইবের জন্য */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Kalpurush:wght@400;700&display=swap');
+
+        :root {
+            --primary-color: #8b0000; /* Deep Royal Red */
+            --secondary-color: #ffd700; /* Gold */
+            --bg-color: #f8f8ff; /* Ghost White */
+            --box-shadow-color: rgba(139, 0, 0, 0.4);
+        }
+
+        /* বেসিক স্টাইল */
+        body {
+            font-family: 'Kalpurush', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--bg-color), #fff0f5); /* Soft Gradient */
+            color: #333;
+            overflow: hidden;
+        }
+
+        /* মূল কন্টেইনার: রয়্যাল স্ক্রোল */
+        .royal-container {
+            background-color: white;
+            padding: 60px;
+            border-radius: 20px;
+            border: 5px solid var(--secondary-color); /* গোল্ডেন বর্ডার */
+            box-shadow: 0 15px 40px var(--box-shadow-color), inset 0 0 20px rgba(255, 215, 0, 0.5);
+            max-width: 900px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            transform-style: preserve-3d;
+            animation: royalEntrance 2s ease-out;
+        }
+
+        @keyframes royalEntrance {
+            0% { opacity: 0; transform: scale(0.8) translateY(-100px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        /* শিরোনাম: 3D টেক্সট ও গ্লো */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 5em;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+            /* 3D লুক */
+            text-shadow: 
+                3px 3px 0 var(--secondary-color),
+                6px 6px 0 var(--primary-color),
+                9px 9px 15px rgba(0, 0, 0, 0.5);
+            animation: heartBeat 3s infinite alternate;
+        }
+
+        @keyframes heartBeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        /* গল্প সেকশন: বুক স্টাইল */
+        .story-section {
+            text-align: justify;
+            margin: 40px 0;
+            padding: 30px;
+            border: 1px solid var(--secondary-color);
+            background: var(--bg-color);
+            border-radius: 15px;
+            line-height: 1.8;
+            transition: all 0.5s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-section::before {
+            content: '🌹';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 2em;
+            opacity: 0.3;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            border-bottom: 3px double var(--secondary-color);
+            padding-bottom: 10px;
+            font-size: 2em;
+            margin-top: 0;
+        }
+
+        /* রোমান্টিক পিক আপ লাইন সেকশন */
+        .pickup-section {
+            margin-top: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .pickup-section h2 {
+            color: var(--secondary-color);
+            border-bottom-color: var(--secondary-color);
+        }
+
+        .pickup-line {
+            background-color: rgba(255, 255, 255, 0.95);
+            color: var(--primary-color);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* স্প্রিং এফেক্ট */
+        }
+
+        .pickup-line:hover {
+            transform: scale(1.1) rotate(-2deg);
+            background-color: var(--secondary-color);
+            color: var(--bg-dark);
+        }
+
+        /* হার্ট রেইন গর্জিয়াস অ্যানিমেশন */
+        .heart-rain {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--primary-color);
+            font-size: 3em;
+            z-index: 5;
+            animation: upAndDisappear 15s linear infinite;
+        }
+        
+        @keyframes upAndDisappear {
+            0% { bottom: -50px; opacity: 0.5; transform: translateX(-50%) scale(0.5); }
+            50% { opacity: 1; }
+            100% { bottom: 100vh; opacity: 0; transform: translateX(-50%) scale(2); }
+        }
+
+        /* একাধিক হার্ট রেইন এলিমেন্ট */
+        .heart-rain:nth-child(2) { left: 20%; font-size: 4em; animation-delay: 3s; }
+        .heart-rain:nth-child(3) { left: 80%; font-size: 2.5em; animation-delay: 6s; }
+        .heart-rain:nth-child(4) { left: 45%; font-size: 3.5em; animation-delay: 9s; }
+        .heart-rain:nth-child(5) { left: 65%; font-size: 5em; animation-delay: 12s; }
+
+        /* footer */
+        .footer-text {
+            margin-top: 40px;
+            font-style: italic;
+            color: var(--primary-color);
+            font-size: 1.2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="heart-rain">❤️</div>
+    <div class="heart-rain">💖</div>
+    <div class="heart-rain">❤️</div>
+    <div class="heart-rain">💖</div>
+    <div class="heart-rain">❤️</div>
+
+    <div class="royal-container">
+        <h1>নাসরিন</h1>
+        <p style="font-size: 1.5em; color: var(--primary-color); font-weight: bold;">তুমি আমার হৃদয়ের একমাত্র সম্রাজ্ঞী 👑</p>
+
+        <div class="story-section">
+            <h2>📜 একটি অবিরাম প্রেমের কবিতা</h2>
+            <p>প্রিয়তম নাসরিন, তোমার কাছে এই বার্তা পাঠাচ্ছি আমার হৃদয়ের গভীরতম কোণ থেকে। আমাদের সম্পর্কের কোনো নির্দিষ্ট ভৌগোলিক অবস্থান নেই, কিন্তু তুমি আমার অনুভূতিতে যে স্থান দখল করেছো, তা কোনো ম্যাপে মাপা সম্ভব নয়। তোমার সাথে কাটানো মুহূর্তগুলো, তা সে ভার্চুয়াল হোক বা স্বপ্নে, আমার কাছে রাজকীয় ঐশ্বর্যের মতো। আমার কাছে তুমিই সেই বিরল রত্ন, যাকে খুঁজে পেতে জীবনের অনেক পথ পেরিয়ে আসতে হয়েছে। তোমার হাসি, তোমার কণ্ঠস্বর আমার প্রতিটি দিনকে পূর্ণতা দেয়। প্রতিটা সকাল শুরু হয় তোমার কথা ভেবে আর রাত নামে তোমার স্বপ্নে।</p>
+            <p style="font-weight: 700; color: var(--primary-color);">আমি প্রতিজ্ঞা করছি, এই ভালোবাসা চিরন্তন, আমাদের দূরত্ব যাই হোক না কেন।</p>
+        </div>
+
+        <div class="pickup-section">
+            <h2>💘 হৃদয়-নিংড়ানো রোমান্টিক পিক আপ লাইন</h2>
+            <div class="pickup-line">
+                <p><strong>১.</strong> আমি কোনোদিন 'Love at first sight'-এ বিশ্বাস করতাম না, কিন্তু প্রথমবার যখন তোমার প্রোফাইল দেখলাম, সেই বিশ্বাস পাল্টে গেল।</p>
+            </div>
+            <div class="pickup-line">
+                <p><strong>২.</strong> তুমি কি জানো তোমার নামের অর্থ? কারণ আমার কাছে এর মানে হলো 'আমার সবথেকে সুন্দর স্বপ্ন'।</p>
+            </div>
+            <div class="pickup-line">
+                <p><strong>৩.</strong> তারা বলে, ডেটিং নাকি একটা সংখ্যার খেলা, তাই কি আমি তোমার নম্বরটা পেতে পারি? আমার ভাগ্য যাচাই করার জন্য।</p>
+            </div>
+            <div class="pickup-line">
+                <p><strong>৪.</strong> কেউ একজন তারা চুরি করে তোমার চোখে বসিয়ে দিয়েছে, তাই না? নাহলে তোমার চোখ এত উজ্জ্বল কেন?</p>
+            </div>
+            <div class="pickup-line">
+                <p><strong>৫.</strong> আমি ইতিহাসের গুরুত্বপূর্ণ তারিখগুলো মনে রাখার চেষ্টা করছি। তুমি কি আমার জীবনের একটি গুরুত্বপূর্ণ তারিখ হতে চাও?</p>
+            </div>
+        </div>
+
+        <p class="footer-text">অনন্ত ভালোবাসা সহ, তোমার প্রেমিক ❤️</p>
+    </div>
+</body>
+</html>
